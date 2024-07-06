@@ -1,0 +1,123 @@
+@import url("/public/styles/variables.css");
+
+.main{
+    min-height: 100vh;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.shorten__content{ 
+    background-color: var(--clr-dark-violet);
+    background-image: url("/images/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: -200px;
+    right: 0;
+    left: 0;
+}
+
+.shorten__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shorten__input{
+    width: 100%;
+    border: 0;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.shorten__button{
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.shorten__list{
+    margin-top: 7rem;
+}
+
+.shorten__item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem .5rem;
+    border-radius: .5rem;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+.shorten__flex{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid var(--clr-light-gray);
+}
+
+.shorten__button{
+    width: 200px;
+    border-radius: .5rem;
+}
+
+.shorten__a{
+    color: var(--clr-black);
+    overflow: scroll;
+}
+
+.shorten__a--cyan{
+    padding: 0 1rem;
+    color: var(--clr-cyan);
+}
+
+.message__error{
+    color: var(--clr-red);
+    font-style: italic;
+    font-size: 12px;
+}
+
+.error{
+    border: 1px solid var(--clr-red);
+    color: var(--clr-red);
+}
+
+@media (width >= 768px){
+    .shorten__content{ 
+        background-image: url("/images/bg-boost-desktop.svg");
+        padding: 2rem;
+        top: -140px;
+    }
+
+    .shorten__form {
+        flex-direction: row;
+    }
+
+    .shorten__list{
+        margin-top: 4rem;
+    }
+
+    .shorten__item{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        background-color: var(--clr-white);
+        color: var(--clr-black);
+    }
+
+    .shorten__flex{
+        flex-direction: row;
+        border: 0;
+    }
+}
+
+

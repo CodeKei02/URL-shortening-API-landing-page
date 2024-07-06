@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+  <script type="module" defer src="/public/app/index.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <img src="../images/logo-black-text.svg" class="logo__black">
+      <button class="nav__hamburger"></button>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__a" href="#">Features</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__a" href="#">Pricing</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__a" href="#">Resources</a>
+        </li>
+        <li class="nav__line"></li>
+        <li class="nav__item login">
+          <a href="#" class="nav__a ">Login</a>
+        </li>
+        <li class="nav__item nav__item--sign-up">
+          <a href="#" class="nav__a  button">Sign Up</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__content">
+      <div class="header__text">
+        <h1 class="header__title">More than just shorter links</h1>
+        <p class="header__paragraph">Build your brand’s recognition and get detailed insights
+          on how your links are performing.
+        </p>
+        <a href="#" class="header__button button">Get Started</a>
+      </div>
+      <div class="header__illustration">
+        <img src="/images/illustration-working.svg">
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="shorten">
+      <div class="shorten__content">
+        <form class="shorten__form">
+          <input type="text" name="text" id="shorten__input" class="shorten__input"
+            placeholder="Shorten a link here...">
+            <span id="message__error"></span>
+          <button type="submit" class="shorten__button button">Shorten It!</button>
+        </form>
+      </div>
+      
+    </section>
+    <ul class="shorten__list">
+      
+    </ul>
+
+    <section class="features">
+      <div class="features__content">
+        <div class="features__text">
+          <h2 class="features__title">Advanced Statistics</h2>
+          <p class="features__paragraph">Track how your links are performing across the web with our
+            advanced statistics dashboard.
+          </p>
+        </div>
+
+        <div class="features__cards">
+          <div class="features__card features__card--1">
+            <div class="features__icon"></div>
+            <div class="features__subtitle">Brand Recognition</div>
+            <p class="features__paragraph">Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your content.
+            </p>
+            
+          </div>
+          
+          <div class="features__card features__card--2">
+            <span class="features__line"></span>
+            
+            <div class="features__icon features__icon--2"></div>
+            <div class="features__subtitle">Detailed Records</div>
+            <p class="features__paragraph">Gain insights into who is clicking your links. Knowing when and where
+              people engage with your content helps inform better decisions.
+            </p>
+            
+          </div>
+          
+          <div class="features__card features__card--3">
+            <span class="features__line"></span>
+
+            <div class="features__icon features__icon--3"></div>
+            <div class="features__subtitle">Fully Customizable</div>
+            <p class="features__paragraph">Improve brand awareness and content discoverability through customizable
+              links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <h2 class="footer__title">Boost your links today</h2>
+      <button class="footer__button button">Get Started</button>
+    </div>
+
+    <div class="footer__end">
+      <div class="footer__image">
+        <img src="../images/logo-white-text.svg" alt="" class="logo__white">
+      </div>
+      <div class="footer__end__content">
+        <div class="footer__text">
+          <p class="footer__subtitle">Features</p>
+          <a href="#" class="footer__a">Link Shortening</a>
+          <a href="#" class="footer__a">Branded Links</a>
+          <a href="#" class="footer__a">Analytics</a>
+        </div>
+
+        <div class="footer__text">
+          <p class="footer__subtitle">Resources</p>
+          <a href="#" class="footer__a">Blog</a>
+          <a href="#" class="footer__a">Developers</a>
+          <a href="#" class="footer__a">Support</a>
+        </div>
+
+        <div class="footer__text">
+          <p class="footer__subtitle">Company</p>
+          <a href="#" class="footer__a">About</a>
+          <a href="#" class="footer__a">Our Team</a>
+          <a href="#" class="footer__a">Careers</a>
+          <a href="#" class="footer__a">Contact</a>
+        </div>
+
+        <div class="footer__social">
+          <div class="footer__icon"></div>
+          <div class="footer__icon"></div>
+          <div class="footer__icon"></div>
+          <div class="footer__icon"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
