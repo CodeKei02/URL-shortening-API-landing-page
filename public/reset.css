@@ -324,12 +324,12 @@ a {
 
 .shorten__a{
     color: var(--clr-black);
-    overflow: scroll;
 }
 
 .shorten__a--cyan{
-    padding: 0 1rem;
-    color: var(--clr-cyan);
+    width: 50%;
+    margin: 1rem;
+    padding: .5rem 1rem;
 }
 
 .message__error{
