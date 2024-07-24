@@ -14,12 +14,24 @@ menuBtn.addEventListener('click', function () {
 });
 
 async function linkShortenCut(link) {
-    const apiUrl = await fetch(`https://cleanuri.com/api/v1/shorten?url=${link}`);
-    const data = await apiUrl.json();
-    shortenLink = await data.result_url;
+    const apiUrl = 'https://api.tinyurl.com/create';
+    const apiKey = 'unUMTf9xC71CCIOFzZ1l4GURHiorFJpg1EwZSp9hKNvNFoK8EAMHAOvWqf5G';
+    
+    const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+            url: link,
+            domain: "tiny.one"
+        })
+    });
 
-    console.log(data.result_url);
-    return data.result_url;
+    const data = await response.json();
+    console.log(data)
+    return data.data.tiny_url;
 }
 
 const submitLink = async (event) => {
@@ -34,21 +46,26 @@ const submitLink = async (event) => {
 }
 
 const addLinkShort = (link, shortLink) => {
-    shortenList.innerHTML = `
+    shortenList.innerHTML += `
     <li class="shorten__item">
-        <small class="link">${link}</small>
+        <p class="link">${link}</p>
         <div class="shorten__flex">
-            <a href="${shortLink}" target="_blank" class="shorten__a" id="short__link">${shortLink}</a>
-            <a href="#" class="shorten__a--cyan button" id="button__copy">Copy</a>
+            <a href="${shortLink}" target="_blank" class="shorten__a short__link">${shortLink}</a>
+            <a href="#" class="shorten__a--cyan button button__copy">Copy</a>
         </div>
     </li>`;
 
-    document.querySelector('#button__copy').addEventListener('click', async e => {
-        e.preventDefault();
-        if (e.target.textContent === "Copy") {
-            await navigator.clipboard.writeText(shortLink);
-            e.target.textContent = "Copied";
-        }
+    let buttonCopy = document.querySelectorAll('.button__copy');
+    
+    buttonCopy.forEach((button) => {
+        button.addEventListener('click', async e => {
+            if(e.target.textContent === "Copy"){
+                await navigator.clipboard.writeText(shortLink);
+            e.target.textContent = "Copied!";
+            e.target.style.backgroundColor = "hsl(257, 27%, 26%)";
+            e.target.style.color = "white";
+            }
+        });
     });
 }
 
